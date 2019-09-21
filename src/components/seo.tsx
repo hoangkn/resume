@@ -36,7 +36,7 @@ function SEO({
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
+      meta={([
         {
           name: `description`,
           content: metaDescription,
@@ -69,7 +69,7 @@ function SEO({
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ] as any[]).concat(meta)}
     />
   )
 }
