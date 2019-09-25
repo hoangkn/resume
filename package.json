@@ -5,8 +5,14 @@
   "author": "Hoang Khac Nguyen <hoangkn_dev@icloud.com>",
   "dependencies": {
     "@material-ui/core": "^4.4.2",
+    "@material-ui/icons": "^4.4.3",
+    "@testing-library/jest-dom": "^4.1.0",
+    "@testing-library/react": "^9.1.4",
+    "@types/jest": "^24.0.18",
     "@types/react": "^16.9.2",
     "@types/react-helmet": "^5.0.10",
+    "@types/react-redux": "^7.1.3",
+    "babel-jest": "^24.9.0",
     "gatsby": "^2.15.20",
     "gatsby-image": "^2.2.20",
     "gatsby-plugin-manifest": "^2.2.18",
@@ -16,9 +22,13 @@
     "gatsby-plugin-typescript": "^2.1.9",
     "gatsby-source-filesystem": "^2.1.26",
     "gatsby-transformer-sharp": "^2.2.16",
+    "jest": "^24.9.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
+    "react-redux": "^7.1.1",
+    "redux-starter-kit": "^0.7.0",
+    "ts-jest": "^24.1.0",
     "typeface-roboto": "^0.0.75",
     "typescript": "^3.6.3"
   },
@@ -32,9 +42,10 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "yarn type-check && gatsby build",
+    "build": "yarn type-check && test && gatsby build",
     "start": "gatsby develop",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "test": "jest"
   },
   "repository": {
     "type": "git",

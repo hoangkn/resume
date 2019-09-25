@@ -5,3 +5,10 @@
  */
 
 // You can delete this file if you're not using it
+
+import { show } from "./src/updateSlice"
+import store from "./src/store"
+
+export const onServiceWorkerUpdateReady = () => {
+  store.dispatch(show())
+}
