@@ -2,7 +2,7 @@ import { IconButton, Snackbar } from "@material-ui/core"
 import { Close } from "@material-ui/icons"
 import * as React from "react"
 
-import message from "../updateMessage"
+import message from "./updateMessage"
 
 export default function UpdateBar({
   open,

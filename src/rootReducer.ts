@@ -1,6 +1,6 @@
 import { combineReducers } from "redux-starter-kit"
 
-import updateReducer from "./updateSlice"
+import updateReducer from "./update/updateSlice"
 
 const rootReducer = combineReducers({ update: updateReducer })
 

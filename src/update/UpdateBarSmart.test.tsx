@@ -9,8 +9,8 @@ import { Provider } from "react-redux"
 import { EnhancedStore, configureStore } from "redux-starter-kit"
 
 import UpdateBarSmart from "./UpdateBarSmart"
-import message from "../updateMessage"
-import { show } from "../updateSlice"
+import message from "./updateMessage"
+import { show } from "./updateSlice"
 import rootReducer from "../rootReducer"
 
 let store: EnhancedStore

@@ -2,7 +2,7 @@ import { fireEvent, render } from "@testing-library/react"
 import * as React from "react"
 
 import UpdateBarview from "./UpdateBarView"
-import message from "../updateMessage"
+import message from "./updateMessage"
 
 test("show update message", () => {
   expect(
