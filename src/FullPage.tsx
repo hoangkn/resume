@@ -1,6 +1,8 @@
 import ReactFullpage from "@fullpage/react-fullpage"
 import * as React from "react"
 
+import "./FullPage.scss"
+
 export default function FullPage() {
   return (
     <ReactFullpage
