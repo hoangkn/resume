@@ -2,6 +2,7 @@ import { createMuiTheme, CssBaseline } from "@material-ui/core"
 import { ThemeProvider } from "@material-ui/styles"
 import * as React from "react"
 import { Provider } from "react-redux"
+import styled from "styled-components"
 import "typeface-roboto"
 
 import Header from "../Header"
@@ -16,13 +17,22 @@ const theme = createMuiTheme({
   },
 })
 
+const FullPageContainer = styled.div`
+  padding-top: 56px;
+  ${theme.breakpoints.up("sm")} {
+    padding-top: 64px;
+  }
+`
+
 const IndexPage = () => (
   <Provider store={store}>
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <SEO title="Home" />
       <Header />
-      <FullPage />
+      <FullPageContainer>
+        <FullPage />
+      </FullPageContainer>
       <UpdateBarSmart />
     </ThemeProvider>
   </Provider>

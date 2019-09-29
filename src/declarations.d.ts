@@ -1,2 +1,2 @@
 declare module "@fullpage/react-fullpage"
-declare module "*.scss"
+declare const particlesJS: any
