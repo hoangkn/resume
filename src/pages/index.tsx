@@ -17,6 +17,7 @@ import FullPage from "../FullPage"
 const theme = createMuiTheme({
   palette: {
     type: "dark",
+    primary: { main: "#354d62" },
   },
 })
 
