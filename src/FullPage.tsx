@@ -1,43 +1,41 @@
 import ReactFullpage from "@fullpage/react-fullpage"
 import * as React from "react"
-import * as Loadable from "react-loadable"
 import styled from "styled-components"
+
+import Experience from "./Experience"
+import Welcome from "./Welcome"
 
 import "./FullPage.scss"
 
-const LoadableContainer = styled.div`
+const Padding = styled.div`
   height: 100%;
-  width: 100%;
+  padding-top: 56px;
+  ${props => props.theme.breakpoints.up("sm")} {
+    padding-top: 64px;
+  }
 `
-
-const LoadableWelcome = Loadable({
-  loader() {
-    return import("./Welcome")
-  },
-  loading() {
-    return null
-  },
-})
-
-const StyledWelcome = styled(LoadableWelcome)`
-  height: 100%;
-  width: 100%;
-`
+function Section({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="section">
+      <Padding>{children}</Padding>
+    </div>
+  )
+}
 
 export default function FullPage() {
   return (
     <ReactFullpage
       navigation={true}
       navigationPosition="left"
-      showActiveTooltip={true}
+      navigationTooltips={["Welcome", "Experience"]}
       render={() => (
         <ReactFullpage.Wrapper>
-          <div className="section" data-tooltip="Welcome">
-            <LoadableContainer>
-              <StyledWelcome />
-            </LoadableContainer>
-          </div>
-          <div className="section" data-tooltip="Experience"></div>
+          <Section>
+            <Welcome />
+          </Section>
+          <Section>
+            <Experience />
+          </Section>
         </ReactFullpage.Wrapper>
       )}
     />

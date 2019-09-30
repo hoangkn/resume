@@ -1,23 +1,36 @@
-import "particles.js"
 import * as React from "react"
+import * as Loadable from "react-loadable"
+import styled from "styled-components"
 
-const divId = "particles-js"
+import { ContentContainer } from "./ContentContainer"
 
-export default function Welcome({ className }: { className?: string }) {
-  React.useEffect(() => {
-    particlesJS(divId, {
-      interactivity: {
-        events: { onclick: { enable: false } },
-        modes: { grab: { distance: 233, line_linked: { opacity: 0.5 } } },
-      },
-      particles: {
-        line_linked: { distance: 233 },
-        move: { random: true, speed: 0.25 },
-        number: { density: { enable: true, value_area: 1597 }, value: 89 },
-        size: { random: true, value: 3 },
-      },
-      retina_detect: true,
-    })
-  })
-  return <div id={divId} className={className} />
+const MainContainer = styled.div`
+  position: relative;
+  height: 100%;
+  width: 100%;
+`
+const LoadableParticles = Loadable({
+  loader() {
+    return import("./Particles")
+  },
+  loading() {
+    return null
+  },
+})
+
+const StyledLoadableParticles = styled(LoadableParticles)`
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+`
+
+export default function Welcome() {
+  return (
+    <MainContainer>
+      <ContentContainer>Welcome</ContentContainer>
+      <StyledLoadableParticles />
+    </MainContainer>
+  )
 }
