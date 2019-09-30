@@ -27,7 +27,7 @@ const IndexPage = () => (
       <MaterialThemeProvider theme={theme}>
         <StylesProvider injectFirst>
           <CssBaseline />
-          <SEO title="Home" />
+          <SEO title="Resume" />
           <Header />
           <FullPage />
           <UpdateBarSmart />

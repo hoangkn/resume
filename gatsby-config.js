@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Hoang's Resume",
-    description: "Hoang Khac Nguyen's resume. Frontend developer.",
+    title: "Hoang Khac Nguyen",
+    description:
+      "Hoang Khac Nguyen's curriculum vitae, CV, resume. Frontend developer.",
     author: "Hoang Khac Nguyen",
   },
   plugins: [
@@ -21,12 +22,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Hoang's Resume`,
+        name: `Hoang Khac Nguyen`,
         short_name: `Hoang`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#ffffff`,
-        display: `minimal-ui`,
+        background_color: `#303030`,
+        theme_color: `#354d62`,
+        display: `fullscreen`,
         icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
