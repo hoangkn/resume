@@ -6,7 +6,7 @@ import message from "./updateMessage"
 
 test("show update message", () => {
   expect(
-    render(<UpdateBarview open={true} />).queryByText(message)
+    render(<UpdateBarview open />).queryByText(message)
   ).toBeInTheDocument()
 })
 test("hide update message", () => {
@@ -17,7 +17,7 @@ test("hide update message", () => {
 test("close", () => {
   // arrange
   const handleClose = jest.fn()
-  const instnace = render(<UpdateBarview open={true} onClose={handleClose} />)
+  const instnace = render(<UpdateBarview open onClose={handleClose} />)
 
   // act
   fireEvent.click(instnace.getByLabelText("close"))
