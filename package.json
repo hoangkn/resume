@@ -4,7 +4,6 @@
   "version": "0.0.1",
   "author": "Hoang Khac Nguyen <hoangkn_dev@icloud.com>",
   "dependencies": {
-    "@fullpage/react-fullpage": "^0.1.16",
     "@material-ui/core": "^4.5.0",
     "@material-ui/icons": "^4.4.3",
     "@testing-library/jest-dom": "^4.1.0",
@@ -22,15 +21,12 @@
     "gatsby-plugin-manifest": "^2.2.20",
     "gatsby-plugin-offline": "^3.0.11",
     "gatsby-plugin-react-helmet": "^3.1.10",
-    "gatsby-plugin-sass": "^2.1.17",
     "gatsby-plugin-sharp": "^2.2.27",
     "gatsby-plugin-styled-components": "^3.1.8",
     "gatsby-plugin-typescript": "^2.1.11",
     "gatsby-source-filesystem": "^2.1.28",
     "gatsby-transformer-sharp": "^2.2.19",
-    "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
-    "node-sass": "^4.12.0",
     "particles.js": "^2.0.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
@@ -51,7 +47,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "GPL-3.0-or-later",
+  "license": "MIT",
   "scripts": {
     "build": "yarn type-check && jest && gatsby build",
     "start": "gatsby develop",

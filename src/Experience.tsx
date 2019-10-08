@@ -1,7 +1,6 @@
+import { Container } from "@material-ui/core"
 import * as React from "react"
 
-import { ContentContainer } from "./ContentContainer"
-
 export default function Experience() {
-  return <ContentContainer>Experience</ContentContainer>
+  return <Container>Experience</Container>
 }

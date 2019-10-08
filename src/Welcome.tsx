@@ -1,17 +1,17 @@
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Typography } from "@material-ui/core"
+import { Typography, Container } from "@material-ui/core"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import * as React from "react"
 import * as Loadable from "react-loadable"
 import styled from "styled-components"
 
-import { ContentContainer } from "./ContentContainer"
-
 const MainContainer = styled.div`
   position: relative;
-  height: 100%;
-  width: 100%;
+  height: calc(100vh - 56px);
+  ${props => props.theme.breakpoints.up("sm")} {
+    height: calc(100vh - 64px);
+  }
 `
 const LoadableParticles = Loadable({
   loader() {
@@ -31,7 +31,7 @@ const StyledLoadableParticles = styled(LoadableParticles)`
   z-index: -1;
 `
 
-const FlexContentContainer = styled(ContentContainer)`
+const FlexContentContainer = styled(Container)`
   display: flex;
   height: 100%;
   flex-direction: column;

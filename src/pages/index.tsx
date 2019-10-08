@@ -8,11 +8,11 @@ import { Provider } from "react-redux"
 import { ThemeProvider as StyledComponentsThemeProvider } from "styled-components"
 import "typeface-roboto"
 
+import Content from "../Content"
 import Header from "../Header"
 import store from "../store"
 import SEO from "../seo"
 import UpdateBarSmart from "../update/UpdateBarSmart"
-import FullPage from "../FullPage"
 
 const theme = createMuiTheme({
   palette: {
@@ -29,7 +29,7 @@ const IndexPage = () => (
           <CssBaseline />
           <SEO title="Resume" />
           <Header />
-          <FullPage />
+          <Content />
           <UpdateBarSmart />
         </StylesProvider>
       </MaterialThemeProvider>
