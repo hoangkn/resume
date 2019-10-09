@@ -27,6 +27,7 @@
     "gatsby-source-filesystem": "^2.1.28",
     "gatsby-transformer-sharp": "^2.2.19",
     "jest": "^24.9.0",
+    "moment": "^2.24.0",
     "particles.js": "^2.0.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
