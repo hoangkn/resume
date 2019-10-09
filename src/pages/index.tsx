@@ -17,7 +17,7 @@ import UpdateBarSmart from "../update/UpdateBarSmart"
 const theme = createMuiTheme({
   palette: {
     type: "dark",
-    primary: { main: "#354d62" },
+    primary: { main: "#00acb6" },
   },
 })
 

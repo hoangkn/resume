@@ -6,7 +6,7 @@ import * as React from "react"
 export default function Header() {
   const { file } = useStaticQuery(graphql`
     query {
-      file: file(relativePath: { eq: "header.png" }) {
+      file: file(relativePath: { eq: "header.jpg" }) {
         childImageSharp {
           fixed(height: 56) {
             ...GatsbyImageSharpFixed
