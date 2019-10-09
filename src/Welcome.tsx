@@ -1,7 +1,8 @@
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Typography, Container } from "@material-ui/core"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Typography, Container } from "@material-ui/core"
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import * as React from "react"
 import * as Loadable from "react-loadable"
 import styled from "styled-components"
@@ -43,7 +44,7 @@ const StyledImg = styled(Img)`
   border-radius: 50%;
 `
 
-const StyledIcon = styled(ExpandMoreIcon)`
+const StyledIcon = styled(FontAwesomeIcon)`
   @keyframes bounce {
     0% {
       transform: translateY(0);
@@ -84,7 +85,7 @@ export default function Welcome() {
         <Typography variant="h4" align="center">
           Front-end Developer
         </Typography>
-        <StyledIcon fontSize="large" />
+        <StyledIcon icon={faChevronDown} size="2x" />
       </FlexContentContainer>
       <StyledLoadableParticles />
     </MainContainer>

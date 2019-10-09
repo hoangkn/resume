@@ -1,10 +1,4 @@
-import {
-  Typography,
-  Card,
-  CardContent,
-  CardHeader,
-  Container,
-} from "@material-ui/core"
+import { Typography, Card, CardContent, CardHeader } from "@material-ui/core"
 import * as moment from "moment"
 import * as React from "react"
 import styled from "styled-components"
@@ -14,7 +8,7 @@ import Entry from "./Entry"
 const dateFormat = "MMM YYYY"
 
 const StyledCard = styled(Card)`
-  margin-bottom: 8px;
+  margin-bottom: 1em;
 `
 
 function EntryCard({ entry }: { entry: Entry }) {
@@ -24,11 +18,11 @@ function EntryCard({ entry }: { entry: Entry }) {
   } · ${duration}`
 
   const subheader = (
-    <div>
-      <div>{entry.organization}</div>
+    <>
+      <Typography variant="h6">{entry.organization}</Typography>
       <div>{dateField}</div>
       <div>{entry.location}</div>
-    </div>
+    </>
   )
   const paragraphs = entry.details
     ? entry.details.split("\n").map((paragraph, index) => (
@@ -56,11 +50,11 @@ export default function EntriesSection({
     <EntryCard key={index} entry={entry} />
   ))
   return (
-    <Container>
+    <>
       <Typography variant="h4" gutterBottom>
         {title}
       </Typography>
       {cards}
-    </Container>
+    </>
   )
 }

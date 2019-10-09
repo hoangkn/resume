@@ -1,5 +1,7 @@
+import { faTimes } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 import { IconButton, Snackbar } from "@material-ui/core"
-import { Close } from "@material-ui/icons"
 import * as React from "react"
 
 import message from "./updateMessage"
@@ -17,7 +19,7 @@ export default function UpdateBar({
       open={open}
       action={
         <IconButton aria-label="close" color="inherit" onClick={onClose}>
-          <Close />
+          <FontAwesomeIcon icon={faTimes} />
         </IconButton>
       }
     />
