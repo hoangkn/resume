@@ -4,6 +4,7 @@ import * as React from "react"
 import styled from "styled-components"
 
 import Entry from "./Entry"
+import SectionTitle from "../SectionTitle"
 
 const dateFormat = "MMM YYYY"
 
@@ -51,9 +52,7 @@ export default function EntriesSection({
   ))
   return (
     <>
-      <Typography variant="h4" gutterBottom>
-        {title}
-      </Typography>
+      <SectionTitle>{title}</SectionTitle>
       {cards}
     </>
   )

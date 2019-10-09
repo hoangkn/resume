@@ -11,7 +11,8 @@ const entries: Entry[] = [
     location: "Budapest, Hungary",
     start: moment("2016-08"),
     end: moment("2019-05"),
-    details: `I had a chance to work on some projects and attend trainings. One project started with rewriting an old Flex application to Angular which is used by 10000 users. Insted of rewriting, we rethought user experience and created an entirely new UI.
+    details: `I had a chance to work on some projects and attend trainings.
+    One project started with rewriting an old Flex application to Angular which is used by 10000 users. Insted of rewriting, we rethought user experience and created an entirely new UI.
     Technologies: Angular, ngRx, RxJS, TypeScript, SCSS, Git
     My other project was improvement of a workflow management application.
     Techonlogies: AngularJS, JavaScript, SCSS, Java, Spring, IBM DB2, Elasticsearch, Git
