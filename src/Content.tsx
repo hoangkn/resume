@@ -2,6 +2,7 @@ import { Container } from "@material-ui/core"
 import * as React from "react"
 import styled from "styled-components"
 
+import About from "./About"
 import Experience from "./Experience"
 import Contact from "./Contact"
 import Welcome from "./Welcome"
@@ -22,6 +23,7 @@ export default function Content() {
     <ContentContainer>
       <Welcome />
       <HorizontalContainer>
+        <About />
         <Experience />
         <Contact />
       </HorizontalContainer>

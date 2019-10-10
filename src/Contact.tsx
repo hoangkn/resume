@@ -25,26 +25,22 @@ export default function Contact() {
   return (
     <>
       <SectionTitle>Contact Me</SectionTitle>
-      <Card>
-        <CardContent>
-          <ContactLine>
-            <FontAwesomeIcon icon={faEnvelope} size={iconSize} />
-            <StyledLink href="mailto:hoangkn_dev@icloud.com">
-              hoangkn_dev@icloud.com
-            </StyledLink>
-          </ContactLine>
-          <ContactLine>
-            <FontAwesomeIcon icon={faPhone} size={iconSize} />
-            <StyledLink href="tel:+36207783223">+36207783223</StyledLink>
-          </ContactLine>
-          <ContactLine>
-            <FontAwesomeIcon icon={faGithub} size={iconSize} />
-            <StyledLink href="https://github.com/hoangkn">
-              github.com/hoangkn
-            </StyledLink>
-          </ContactLine>
-        </CardContent>
-      </Card>
+      <ContactLine>
+        <FontAwesomeIcon icon={faEnvelope} size={iconSize} />
+        <StyledLink href="mailto:hoangkn_dev@icloud.com">
+          hoangkn_dev@icloud.com
+        </StyledLink>
+      </ContactLine>
+      <ContactLine>
+        <FontAwesomeIcon icon={faPhone} size={iconSize} />
+        <StyledLink href="tel:+36207783223">+36207783223</StyledLink>
+      </ContactLine>
+      <ContactLine>
+        <FontAwesomeIcon icon={faGithub} size={iconSize} />
+        <StyledLink href="https://github.com/hoangkn">
+          github.com/hoangkn
+        </StyledLink>
+      </ContactLine>
     </>
   )
 }

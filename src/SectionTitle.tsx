@@ -3,7 +3,7 @@ import * as React from "react"
 import styled from "styled-components"
 
 const HeaderWithMargin = styled(Typography)`
-  margin-top: 2em;
+  margin-top: 1em;
 `
 
 export default function SectionTitle({
