@@ -9,6 +9,9 @@ import {
   faGit,
 } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import gatsbyIcon from "@iconify/icons-simple-icons/gatsby"
+import typescriptIcon from "@iconify/icons-simple-icons/typescript"
+import { Icon } from "@iconify/react"
 import { Typography } from "@material-ui/core"
 import * as React from "react"
 import styled from "styled-components"
@@ -17,10 +20,23 @@ const IconSpan = styled.span`
   padding-right: 13px;
 `
 
-function BigIcon({ icon }: { icon: IconProp }) {
+function StyledFontAwesome({ icon }: { icon: IconProp }) {
   return (
     <IconSpan>
       <FontAwesomeIcon icon={icon} size="4x" />
+    </IconSpan>
+  )
+}
+
+const StyledIconify = styled(Icon)`
+  font-size: 49px;
+  vertical-align: -3px;
+`
+
+function StyledIconifyWithSpan({ icon }: { icon: object }) {
+  return (
+    <IconSpan>
+      <StyledIconify icon={icon} />
     </IconSpan>
   )
 }
@@ -42,13 +58,15 @@ export default function About() {
       </Typography>
       <Typography variant="h5">Skills</Typography>
       <Icons>
-        <BigIcon icon={faReact} />
-        <BigIcon icon={faAngular} />
-        <BigIcon icon={faJs} />
-        <BigIcon icon={faSass} />
-        <BigIcon icon={faCss3} />
-        <BigIcon icon={faHtml5} />
-        <BigIcon icon={faGit} />
+        <StyledIconifyWithSpan icon={gatsbyIcon} />
+        <StyledFontAwesome icon={faReact} />
+        <StyledFontAwesome icon={faAngular} />
+        <StyledIconifyWithSpan icon={typescriptIcon} />
+        <StyledFontAwesome icon={faJs} />
+        <StyledFontAwesome icon={faSass} />
+        <StyledFontAwesome icon={faCss3} />
+        <StyledFontAwesome icon={faHtml5} />
+        <StyledFontAwesome icon={faGit} />
       </Icons>
       <Typography variant="h5">Age</Typography>
       <Typography variant="body1">27</Typography>
