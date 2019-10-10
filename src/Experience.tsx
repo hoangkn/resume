@@ -38,6 +38,6 @@ const entries: Entry[] = [
   },
 ]
 
-export default function() {
+export default function Experience() {
   return <EntriesSection title="Experience" entries={entries} />
 }

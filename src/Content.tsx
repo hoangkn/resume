@@ -6,6 +6,7 @@ import About from "./About"
 import Experience from "./Experience"
 import Contact from "./Contact"
 import Welcome from "./Welcome"
+import Education from "./Education"
 
 const ContentContainer = styled.div`
   padding-top: 56px;
@@ -25,6 +26,7 @@ export default function Content() {
       <HorizontalContainer>
         <About />
         <Experience />
+        <Education />
         <Contact />
       </HorizontalContainer>
     </ContentContainer>
