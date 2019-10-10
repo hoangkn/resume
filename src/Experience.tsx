@@ -15,7 +15,7 @@ const entries: Entry[] = [
     One project started with rewriting an old Flex application to Angular which is used by 10000 users. Insted of rewriting, we rethought user experience and created an entirely new UI.
     Technologies: Angular, ngRx, RxJS, TypeScript, SCSS, Git
     My other project was improvement of a workflow management application.
-    Techonlogies: AngularJS, JavaScript, SCSS, Java, Spring, IBM DB2, Elasticsearch, Git
+    Techonlogies: AngularJS, JavaScript, Less, CSS, Java, Spring, IBM DB2, Elasticsearch, Git
     I participated on a 15-week training program in New York and London includes an orientation to the Firm, intensive technology training and an introduction to proprietary technologies, and culminates with a four-week group project.`,
   },
   {
@@ -25,7 +25,7 @@ const entries: Entry[] = [
     start: moment("2015-03"),
     end: moment("2016-08"),
     details: `I created a new configuration tool for an enterprise web application. 
-    Technologies: AngularJS, Bootstrap, Java, Spring, IBM DB2.`,
+    Technologies: AngularJS, JavaScript, Bootstrap, Less, CSS, Java, Spring, IBM DB2`,
   },
   {
     title: "Engineering Intern",
