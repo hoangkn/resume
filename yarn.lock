@@ -903,6 +903,11 @@
   dependencies:
     "@hapi/hoek" "8.x.x"
 
+"@iconify/icons-emojione@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-emojione/-/icons-emojione-1.0.3.tgz#f07c3159f16d327fc976ea7b2d37e4550d4a6036"
+  integrity sha512-GPc0iUqIeyy1VlzVxeiop+k1bRZVFzdJ8R+HQOLfqCuWangLyanDk1v9q1yzcVSCwQMKg1gV2itHoxQlvA14Ww==
+
 "@iconify/icons-simple-icons@^1.0.12":
   version "1.0.12"
   resolved "https://registry.yarnpkg.com/@iconify/icons-simple-icons/-/icons-simple-icons-1.0.12.tgz#6ec41e30bf659119b4c374dd941d749bafb1b53e"

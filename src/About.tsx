@@ -9,6 +9,8 @@ import {
   faGit,
 } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import hungary from "@iconify/icons-emojione/flag-for-flag-hungary"
+import uk from "@iconify/icons-emojione/flag-for-flag-united-kingdom"
 import gatsbyIcon from "@iconify/icons-simple-icons/gatsby"
 import typescriptIcon from "@iconify/icons-simple-icons/typescript"
 import { Icon } from "@iconify/react"
@@ -41,7 +43,7 @@ function StyledIconifyWithSpan({ icon }: { icon: object }) {
   )
 }
 
-const Icons = styled.div`
+const InfoSection = styled.div`
   padding-bottom: 16px;
 `
 
@@ -57,7 +59,7 @@ export default function About() {
         looking for new challenges especially with React in Western Europe.
       </Typography>
       <Typography variant="h5">Skills</Typography>
-      <Icons>
+      <InfoSection>
         <StyledIconifyWithSpan icon={gatsbyIcon} />
         <StyledFontAwesome icon={faReact} />
         <StyledFontAwesome icon={faAngular} />
@@ -67,7 +69,12 @@ export default function About() {
         <StyledFontAwesome icon={faCss3} />
         <StyledFontAwesome icon={faHtml5} />
         <StyledFontAwesome icon={faGit} />
-      </Icons>
+      </InfoSection>
+      <Typography variant="h5">Languages</Typography>
+      <InfoSection>
+        <StyledIconifyWithSpan icon={hungary} />
+        <StyledIconifyWithSpan icon={uk} />
+      </InfoSection>
       <Typography variant="h5">Age</Typography>
       <Typography variant="body1">27</Typography>
     </>
