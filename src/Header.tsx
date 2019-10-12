@@ -8,7 +8,7 @@ export default function Header() {
     query {
       file: file(relativePath: { eq: "header.jpg" }) {
         childImageSharp {
-          fixed(height: 56) {
+          fixed(height: 48) {
             ...GatsbyImageSharpFixed
           }
         }
