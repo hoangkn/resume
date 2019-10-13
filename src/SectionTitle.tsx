@@ -3,16 +3,18 @@ import * as React from "react"
 import styled from "styled-components"
 
 const HeaderWithMargin = styled(Typography)`
-  margin-top: 1em;
+  padding-top: 64px;
 `
 
 export default function SectionTitle({
+  id,
   children,
 }: {
+  id?: string
   children: React.ReactNode
 }) {
   return (
-    <HeaderWithMargin variant="h4" gutterBottom>
+    <HeaderWithMargin id={id} variant="h4" gutterBottom>
       {children}
     </HeaderWithMargin>
   )

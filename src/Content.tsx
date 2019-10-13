@@ -7,31 +7,27 @@ import Experience from "./Experience"
 import Contact from "./Contact"
 import Welcome from "./Welcome"
 import Education from "./Education"
+import TopPaddingContainer from "./TopPaddingContainer"
 
-const ContentContainer = styled.div`
-  padding-top: 56px;
-  @media (min-width: 0px) and (orientation: landscape) {
-    padding-top: 48px;
-  }
-  ${props => props.theme.breakpoints.up("sm")} {
-    padding-top: 64px;
-  }
-`
-
-const HorizontalContainer = styled(Container)`
+const SidePaddingContainer = styled(Container)`
   padding-bottom: 1em;
+`
+const TopAndLeftPaddingContainer = styled(TopPaddingContainer)`
+  ${props => props.theme.breakpoints.up("sm")} {
+    padding-left: 106px;
+  }
 `
 
 export default function Content() {
   return (
-    <ContentContainer>
+    <TopAndLeftPaddingContainer id="Welcome">
       <Welcome />
-      <HorizontalContainer>
+      <SidePaddingContainer>
         <About />
         <Experience />
         <Education />
         <Contact />
-      </HorizontalContainer>
-    </ContentContainer>
+      </SidePaddingContainer>
+    </TopAndLeftPaddingContainer>
   )
 }

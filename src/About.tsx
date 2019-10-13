@@ -18,6 +18,8 @@ import { Typography } from "@material-ui/core"
 import * as React from "react"
 import styled from "styled-components"
 
+import SectionTitle from "./SectionTitle"
+
 const IconSpan = styled.span`
   padding-right: 13px;
 `
@@ -50,9 +52,7 @@ const InfoSection = styled.div`
 export default function About() {
   return (
     <>
-      <Typography variant="h4" gutterBottom>
-        About Me
-      </Typography>
+      <SectionTitle id="About">About Me</SectionTitle>
       <Typography variant="subtitle1" paragraph>
         I am an enthusiastic front-end developer with 3 years’ experience
         including Angular, TypeScript, JavaScript, SCSS, CSS, HTML, Git. I am

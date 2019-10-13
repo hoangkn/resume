@@ -24,7 +24,7 @@ const iconSize = "lg"
 export default function Contact() {
   return (
     <>
-      <SectionTitle>Contact Me</SectionTitle>
+      <SectionTitle id="Contact">Contact Me</SectionTitle>
       <ContactLine>
         <FontAwesomeIcon icon={faEnvelope} size={iconSize} />
         <StyledLink href="mailto:hoangkn_dev@icloud.com">
