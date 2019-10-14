@@ -7,28 +7,11 @@ import {
   Link,
 } from "@material-ui/core"
 import * as React from "react"
+import { polyfill } from "smoothscroll-polyfill"
 
 import TopPaddingContainer from "../TopPaddingContainer"
 
-const ListContent = (
-  <>
-    <ListItem>
-      <Link href="#Welcome">Welcome</Link>
-    </ListItem>
-    <ListItem>
-      <Link href="#About">About Me</Link>
-    </ListItem>
-    <ListItem>
-      <Link href="#Experience">Experience</Link>
-    </ListItem>
-    <ListItem>
-      <Link href="#Education">Education</Link>
-    </ListItem>
-    <ListItem>
-      <Link href="#Contact">Contact Me</Link>
-    </ListItem>
-  </>
-)
+polyfill()
 
 export default function AppDrawer({
   mobileMenuOpen,
@@ -37,6 +20,34 @@ export default function AppDrawer({
   mobileMenuOpen?: boolean
   onClose?: () => void
 }) {
+  function handleClick(item: string) {
+    if (onClose) {
+      onClose()
+    }
+    const target = document.querySelector(`#${item.split(" ")[0]}`)
+    if (target) {
+      setTimeout(
+        () =>
+          target.scrollIntoView({
+            behavior: "smooth",
+          }),
+        0
+      )
+    }
+  }
+
+  const ListContent = [
+    "Welcome",
+    "About Me",
+    "Experience",
+    "Education",
+    "Contact Me",
+  ].map(item => (
+    <ListItem key={item}>
+      <Link onClick={() => handleClick(item)}>{item}</Link>
+    </ListItem>
+  ))
+
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down("xs"))
   if (matches) {

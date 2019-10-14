@@ -15,8 +15,6 @@ import store from "../store"
 import SEO from "../seo"
 import UpdateBarSmart from "../update/UpdateBarSmart"
 
-import "../global.css"
-
 const theme = createMuiTheme({
   palette: {
     type: "dark",

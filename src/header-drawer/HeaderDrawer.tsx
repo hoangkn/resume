@@ -1,7 +1,16 @@
 import * as React from "react"
+import * as Loadable from "react-loadable"
 
-import AppDrawer from "../header-drawer/AppDrawer"
 import Header from "../header-drawer/Header"
+
+const LoadableDrawer = Loadable({
+  loader() {
+    return import("./AppDrawer")
+  },
+  loading() {
+    return null
+  },
+})
 
 export default function HeaderDrawer() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
@@ -11,7 +20,10 @@ export default function HeaderDrawer() {
   return (
     <>
       <Header onMenuClick={handleMenuClick} />
-      <AppDrawer mobileMenuOpen={mobileMenuOpen} onClose={handleMenuClick} />
+      <LoadableDrawer
+        mobileMenuOpen={mobileMenuOpen}
+        onClose={handleMenuClick}
+      />
     </>
   )
 }

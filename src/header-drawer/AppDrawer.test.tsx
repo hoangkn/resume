@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react"
+import { render, fireEvent } from "@testing-library/react"
 import * as React from "react"
 import { ThemeProvider } from "styled-components"
 
@@ -82,4 +82,32 @@ test("show mobile menu", () => {
 
   // assert
   expect(component.queryByText("Welcome")).toBeInTheDocument()
+})
+
+test("close mobile menu", () => {
+  // arrange
+  window.matchMedia = jest.fn().mockImplementation(query => {
+    return {
+      matches: true,
+      media: query,
+      onchange: null,
+      addListener: jest.fn(), // deprecated
+      removeListener: jest.fn(), // deprecated
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+      dispatchEvent: jest.fn(),
+    }
+  })
+  const handleClose = jest.fn()
+  const component = render(
+    <ThemeProvider theme={theme}>
+      <AppDrawer mobileMenuOpen={true} onClose={handleClose} />
+    </ThemeProvider>
+  )
+
+  // act
+  fireEvent.click(component.getByText("Welcome"))
+
+  // assert
+  expect(handleClose.mock.calls).toHaveLength(1)
 })

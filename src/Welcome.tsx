@@ -87,7 +87,7 @@ export default function Welcome() {
         </Typography>
         <StyledIcon icon={faChevronDown} size="2x" />
       </FlexContentContainer>
-      <StyledLoadableParticles />
+      {/* <StyledLoadableParticles /> */}
     </MainContainer>
   )
 }

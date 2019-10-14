@@ -25,7 +25,7 @@ beforeEach(() => {
   })
 })
 
-test("should open mobile menu", () => {
+test("should open mobile menu", async () => {
   // arrange
   window.matchMedia = jest.fn().mockImplementation(query => {
     return {
@@ -49,5 +49,7 @@ test("should open mobile menu", () => {
   fireEvent.click(element.getByLabelText("open drawer"))
 
   // assert
-  expect(element.queryByText("Welcome")).toBeInTheDocument()
+  await wait(() => {
+    expect(element.queryByText("Welcome")).toBeInTheDocument()
+  })
 })
