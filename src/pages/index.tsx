@@ -8,9 +8,9 @@ import { Provider } from "react-redux"
 import { ThemeProvider as StyledComponentsThemeProvider } from "styled-components"
 import "typeface-roboto"
 
-import AppDrawer from "../AppDrawer"
 import Content from "../Content"
-import Header from "../Header"
+
+import HeaderDrawer from "../header-drawer/HeaderDrawer"
 import store from "../store"
 import SEO from "../seo"
 import UpdateBarSmart from "../update/UpdateBarSmart"
@@ -22,21 +22,20 @@ const theme = createMuiTheme({
   },
 })
 
-const IndexPage = () => (
-  <Provider store={store}>
-    <StyledComponentsThemeProvider theme={theme}>
-      <MaterialThemeProvider theme={theme}>
-        <StylesProvider injectFirst>
-          <CssBaseline />
-          <SEO title="Resume" />
-          <Header />
-          <AppDrawer />
-          <Content />
-          <UpdateBarSmart />
-        </StylesProvider>
-      </MaterialThemeProvider>
-    </StyledComponentsThemeProvider>
-  </Provider>
-)
-
-export default IndexPage
+export default function IndexPage() {
+  return (
+    <Provider store={store}>
+      <StyledComponentsThemeProvider theme={theme}>
+        <MaterialThemeProvider theme={theme}>
+          <StylesProvider injectFirst>
+            <CssBaseline />
+            <SEO title="Resume" />
+            <HeaderDrawer />
+            <Content />
+            <UpdateBarSmart />
+          </StylesProvider>
+        </MaterialThemeProvider>
+      </StyledComponentsThemeProvider>
+    </Provider>
+  )
+}
