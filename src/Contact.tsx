@@ -1,11 +1,7 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import {
-  faEnvelope,
-  faMobileAlt,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons"
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Card, CardContent, Link } from "@material-ui/core"
+import { Link } from "@material-ui/core"
 import * as React from "react"
 import styled from "styled-components"
 
@@ -24,7 +20,7 @@ const iconSize = "lg"
 export default function Contact() {
   return (
     <>
-      <SectionTitle id="Contact">Contact Me</SectionTitle>
+      <SectionTitle>Contact Me</SectionTitle>
       <ContactLine>
         <FontAwesomeIcon icon={faEnvelope} size={iconSize} />
         <StyledLink href="mailto:hoangkn_dev@icloud.com">

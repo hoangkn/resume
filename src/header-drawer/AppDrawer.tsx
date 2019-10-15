@@ -7,11 +7,24 @@ import {
   Link,
 } from "@material-ui/core"
 import * as React from "react"
+import Scrollspy from "react-scrollspy"
 import { polyfill } from "smoothscroll-polyfill"
 
 import TopPaddingContainer from "../TopPaddingContainer"
 
 polyfill()
+
+const sectionTitles = [
+  "Welcome",
+  "About Me",
+  "Experience",
+  "Education",
+  "Contact Me",
+]
+
+function titleToId(title: string) {
+  return title.split(" ")[0]
+}
 
 export default function AppDrawer({
   mobileMenuOpen,
@@ -24,7 +37,7 @@ export default function AppDrawer({
     if (onClose) {
       onClose()
     }
-    const target = document.querySelector(`#${item.split(" ")[0]}`)
+    const target = document.querySelector(`#${titleToId(item)}`)
     if (target) {
       setTimeout(
         () =>
@@ -36,13 +49,7 @@ export default function AppDrawer({
     }
   }
 
-  const ListContent = [
-    "Welcome",
-    "About Me",
-    "Experience",
-    "Education",
-    "Contact Me",
-  ].map(item => (
+  const ListItems = sectionTitles.map(item => (
     <ListItem key={item}>
       <Link onClick={() => handleClick(item)}>{item}</Link>
     </ListItem>
@@ -53,13 +60,21 @@ export default function AppDrawer({
   if (matches) {
     return (
       <Drawer open={mobileMenuOpen} onClose={onClose}>
-        <List>{ListContent}</List>
+        <List>{ListItems}</List>
       </Drawer>
     )
   } else {
     return (
       <Drawer variant="permanent">
-        <TopPaddingContainer as={List}>{ListContent}</TopPaddingContainer>
+        <TopPaddingContainer>
+          <Scrollspy
+            items={sectionTitles.map(titleToId)}
+            componentTag={List}
+            currentClassName="Mui-selected"
+          >
+            {ListItems}
+          </Scrollspy>
+        </TopPaddingContainer>
       </Drawer>
     )
   }

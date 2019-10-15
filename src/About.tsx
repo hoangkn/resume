@@ -52,7 +52,7 @@ const InfoSection = styled.div`
 export default function About() {
   return (
     <>
-      <SectionTitle id="About">About Me</SectionTitle>
+      <SectionTitle>About Me</SectionTitle>
       <Typography variant="subtitle1" paragraph>
         I am an enthusiastic front-end developer with 3 years’ experience
         including Angular, TypeScript, JavaScript, SCSS, CSS, HTML, Git. I am

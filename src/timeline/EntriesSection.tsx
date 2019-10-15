@@ -52,7 +52,7 @@ export default function EntriesSection({
   ))
   return (
     <>
-      <SectionTitle id={title}>{title}</SectionTitle>
+      <SectionTitle>{title}</SectionTitle>
       {cards}
     </>
   )
