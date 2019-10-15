@@ -78,6 +78,7 @@ export default function AppDrawer({
           items={sectionTitles.map(titleToId)}
           componentTag={List}
           currentClassName="Mui-selected"
+          offset={-1}
         >
           {ListItems}
         </Scrollspy>
