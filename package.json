@@ -60,8 +60,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "yarn type-check && jest && gatsby build",
+    "build": "yarn test && gatsby build",
     "start": "gatsby develop",
+    "test": "yarn type-check && jest",
     "type-check": "tsc --noEmit"
   },
   "repository": {
