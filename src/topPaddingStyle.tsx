@@ -1,10 +1,11 @@
-import styled from "styled-components"
-export default styled.div`
+export default function topPaddingStyle(props: any) {
+  return `
   padding-top: 56px;
   @media (min-width: 0px) and (orientation: landscape) {
     padding-top: 48px;
   }
-  ${props => props.theme.breakpoints.up("sm")} {
+  ${props.theme.breakpoints.up("sm")} {
     padding-top: 64px;
   }
 `
+}

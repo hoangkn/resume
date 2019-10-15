@@ -9,10 +9,18 @@ import {
 import * as React from "react"
 import Scrollspy from "react-scrollspy"
 import { polyfill } from "smoothscroll-polyfill"
+import styled from "styled-components"
 
-import TopPaddingContainer from "../TopPaddingContainer"
+import topPaddingStyle from "../topPaddingStyle"
 
 polyfill()
+
+const StyledDrawer = styled(Drawer)`
+  div {
+    justify-content: center;
+    ${topPaddingStyle}
+  }
+`
 
 const sectionTitles = [
   "Welcome",
@@ -65,17 +73,15 @@ export default function AppDrawer({
     )
   } else {
     return (
-      <Drawer variant="permanent">
-        <TopPaddingContainer>
-          <Scrollspy
-            items={sectionTitles.map(titleToId)}
-            componentTag={List}
-            currentClassName="Mui-selected"
-          >
-            {ListItems}
-          </Scrollspy>
-        </TopPaddingContainer>
-      </Drawer>
+      <StyledDrawer variant="permanent">
+        <Scrollspy
+          items={sectionTitles.map(titleToId)}
+          componentTag={List}
+          currentClassName="Mui-selected"
+        >
+          {ListItems}
+        </Scrollspy>
+      </StyledDrawer>
     )
   }
 }

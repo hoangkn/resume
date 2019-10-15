@@ -7,7 +7,7 @@ import Experience from "./Experience"
 import Contact from "./Contact"
 import Welcome from "./Welcome"
 import Education from "./Education"
-import TopPaddingContainer from "./TopPaddingContainer"
+import topPaddingStyle from "./topPaddingStyle"
 
 const LeftPaddingContainer = styled.div`
   padding-bottom: 1em;
@@ -15,23 +15,29 @@ const LeftPaddingContainer = styled.div`
     padding-left: 106px;
   }
 `
+const TopPaddingDiv = styled.div`
+  ${topPaddingStyle}
+`
+const TopPaddingContainer = styled(Container)`
+  ${topPaddingStyle}
+`
 
 export default function Content() {
   return (
     <LeftPaddingContainer>
-      <TopPaddingContainer id="Welcome">
+      <TopPaddingDiv id="Welcome">
         <Welcome />
-      </TopPaddingContainer>
-      <TopPaddingContainer as={Container} id="About">
+      </TopPaddingDiv>
+      <TopPaddingContainer id="About">
         <About />
       </TopPaddingContainer>
-      <TopPaddingContainer as={Container} id="Experience">
+      <TopPaddingContainer id="Experience">
         <Experience />
       </TopPaddingContainer>
-      <TopPaddingContainer as={Container} id="Education">
+      <TopPaddingContainer id="Education">
         <Education />
       </TopPaddingContainer>
-      <TopPaddingContainer as={Container} id="Contact">
+      <TopPaddingContainer id="Contact">
         <Contact />
       </TopPaddingContainer>
     </LeftPaddingContainer>
