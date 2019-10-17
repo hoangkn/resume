@@ -76,7 +76,7 @@ export default function About() {
         <StyledIconifyWithSpan icon={uk} />
       </InfoSection>
       <Typography variant="h5">Age</Typography>
-      <Typography variant="body1">27</Typography>
+      <Typography variant="body1">28</Typography>
     </>
   )
 }

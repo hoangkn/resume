@@ -16,7 +16,7 @@ export default function Particles({ className }: { className?: string }) {
       particles: {
         color: { value: color },
         line_linked: { color, distance: 233 },
-        move: { random: true, speed: 0.5 },
+        move: { random: true, speed: 1 },
         number: { density: { enable: true, value_area: 1597 }, value: 89 },
         size: { random: true, value: 3 },
       },
