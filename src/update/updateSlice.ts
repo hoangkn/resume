@@ -7,7 +7,7 @@ export interface Update {
 const initialState: Update = { display: false }
 
 const updateSlice = createSlice({
-  slice: "update",
+  name: "update",
   initialState,
   reducers: {
     show(state) {
