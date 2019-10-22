@@ -9,7 +9,7 @@ const theme = { zIndex: { drawer: 0 } }
 
 beforeEach(() => {
   ;(useStaticQuery as jest.Mock).mockReturnValue({
-    file: {
+    logo: {
       childImageSharp: {
         fixed: {
           base64:
@@ -21,6 +21,9 @@ beforeEach(() => {
             "/static/b5b99c261f9302da8b8cacf1427ab95c/8539d/header.jpg 1x,\n/static/b5b99c261f9302da8b8cacf1427ab95c/775d9/header.jpg 1.5x,\n/static/b5b99c261f9302da8b8cacf1427ab95c/bc3a8/header.jpg 2x",
         },
       },
+    },
+    pdf: {
+      publicUrl: "URL",
     },
   })
 })
