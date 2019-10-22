@@ -57,8 +57,8 @@ export default function Header({ onMenuClick }: { onMenuClick?: () => void }) {
         <Img fixed={logo.childImageSharp.fixed} />
         <Grow />
         {matches ? (
-          <a href={pdf.publicURL} aria-label="download as pdf">
-            <IconButton>
+          <a href={pdf.publicURL}>
+            <IconButton aria-label="download as pdf">
               <PdfIcon />
             </IconButton>
           </a>
