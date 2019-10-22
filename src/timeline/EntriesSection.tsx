@@ -27,7 +27,7 @@ function EntryCard({ entry }: { entry: Entry }) {
   )
   const paragraphs = entry.details
     ? entry.details.split("\n").map((paragraph, index) => (
-        <Typography key={index} variant="body1" paragraph>
+        <Typography key={index} variant="body1">
           {paragraph}
         </Typography>
       ))

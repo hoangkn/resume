@@ -55,8 +55,8 @@ export default function About() {
       <SectionTitle>About Me</SectionTitle>
       <Typography variant="subtitle1" paragraph>
         I am an enthusiastic front-end developer with 3 years’ experience
-        including Angular, TypeScript, JavaScript, SCSS, CSS, HTML, Git. I am
-        looking for new challenges especially with React in Western Europe.
+        including Angular, TypeScript, JavaScript, SCSS, CSS, HTML, REST, Git. I
+        am looking for new challenges especially with React in Western Europe.
       </Typography>
       <Typography variant="h5">Skills</Typography>
       <InfoSection>
