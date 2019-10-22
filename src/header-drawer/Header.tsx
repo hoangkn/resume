@@ -1,4 +1,4 @@
-import { faBars } from "@fortawesome/free-solid-svg-icons"
+import { faBars, faFilePdf } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   AppBar,
@@ -6,6 +6,7 @@ import {
   IconButton,
   useTheme,
   useMediaQuery,
+  Button,
 } from "@material-ui/core"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -16,15 +17,26 @@ const StyledAppBar = styled(AppBar)`
   z-index: ${props => props.theme.zIndex.drawer + 1};
 `
 
+const Grow = styled.div`
+  flex-grow: 1;
+`
+
+function PdfIcon() {
+  return <FontAwesomeIcon icon={faFilePdf} />
+}
+
 export default function Header({ onMenuClick }: { onMenuClick?: () => void }) {
-  const { file } = useStaticQuery(graphql`
+  const { logo, pdf } = useStaticQuery(graphql`
     query {
-      file: file(relativePath: { eq: "header.jpg" }) {
+      logo: file(relativePath: { eq: "header.jpg" }) {
         childImageSharp {
           fixed(height: 48) {
             ...GatsbyImageSharpFixed
           }
         }
+      }
+      pdf: file(relativePath: { eq: "resume.pdf" }) {
+        publicURL
       }
     }
   `)
@@ -42,7 +54,19 @@ export default function Header({ onMenuClick }: { onMenuClick?: () => void }) {
             <FontAwesomeIcon icon={faBars} />
           </IconButton>
         ) : null}
-        <Img fixed={file.childImageSharp.fixed} />
+        <Img fixed={logo.childImageSharp.fixed} />
+        <Grow />
+        {matches ? (
+          <a href={pdf.publicURL} aria-label="download as pdf">
+            <IconButton>
+              <PdfIcon />
+            </IconButton>
+          </a>
+        ) : (
+          <Button href={pdf.publicURL} startIcon={<PdfIcon />}>
+            Download
+          </Button>
+        )}
       </Toolbar>
     </StyledAppBar>
   )
