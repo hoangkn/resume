@@ -3,9 +3,9 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({
-  description,
-  lang,
-  meta,
+  description = "",
+  lang = "en",
+  meta = [],
   title,
 }: {
   description?: string
@@ -72,12 +72,6 @@ function SEO({
       ] as any[]).concat(meta)}
     />
   )
-}
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
 }
 
 export default SEO
