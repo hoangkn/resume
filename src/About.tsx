@@ -54,10 +54,11 @@ export default function About() {
     <>
       <SectionTitle>About Me</SectionTitle>
       <Typography variant="subtitle1" paragraph>
-        I am an enthusiastic front-end developer with 3 years’ experience
+        I am an enthusiastic front-end developer with 4 years’ experience
         including React, Angular, TypeScript, JavaScript, CSS, HTML, REST, Git.
         I have been experimenting with latest technologies recently including
-        React, Gatsby, CSS-in-JS, Storybook, AWS, Terraform.
+        React, Gatsby, CSS-in-JS, Storybook, AWS, Terraform. I am open for
+        relocation.
       </Typography>
       <Typography variant="h5">Skills</Typography>
       <InfoSection>
