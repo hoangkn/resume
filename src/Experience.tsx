@@ -11,10 +11,11 @@ const entries: Entry[] = [
     location: "Budapest, Hungary",
     start: moment("2016-08"),
     end: moment("2019-05"),
-    details: `Design and implement a new web UI with global team
-    Review code and coach junior developers
-    Improve enterprise web apps
-    Technologies: Angular, ngRx, RxJS, TypeScript, JavaScript, SCSS, CSS, REST, Git, Java, Spring, Elasticsearch, IBM DB2`,
+    details: `Architect and develop a widget framework UI
+    Improve a data heavy, exception management app which has 10 000 users
+    Review code and help junior developers
+    Lead retrospective and responsible for team improvement
+    Technologies: Angular, TypeScript, JavaScript, SCSS, CSS, REST, Git, Java, Spring, Elasticsearch, SQL`,
   },
   {
     title: "Software Developer Intern",
@@ -22,8 +23,9 @@ const entries: Entry[] = [
     location: "Budapest, Hungary",
     start: moment("2015-03"),
     end: moment("2016-08"),
-    details: `Improve and create tooling for enterprise app 
-    Technologies: AngularJS, JavaScript, Bootstrap, Less, CSS, REST, Java, Spring, IBM DB2`,
+    details: `Create an onboarding and management tool for an internal app
+    Improve a to-do application with dev team
+    Technologies: AngularJS, JavaScript, Bootstrap, CSS, REST, Java, Spring, Elasticsearch, SQL`,
   },
 ]
 
