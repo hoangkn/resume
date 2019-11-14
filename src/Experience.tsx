@@ -6,7 +6,7 @@ import Entry from "./timeline/Entry"
 
 const entries: Entry[] = [
   {
-    title: "Full Stack Developer",
+    title: "Front-end Developer",
     organization: "Morgan Stanley",
     location: "Budapest, Hungary",
     start: moment("2016-08"),
