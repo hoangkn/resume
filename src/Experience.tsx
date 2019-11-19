@@ -6,7 +6,16 @@ import Entry from "./timeline/Entry"
 
 const entries: Entry[] = [
   {
-    title: "Front-end Developer",
+    title: "Career Break - Personal Development",
+    organization: "",
+    location: "Budapest, Hungary",
+    start: moment("2019-06"),
+    details: `Create my resume website: www.hoangkn.com
+    Experiment with front-end technologies: React, Redux, Webpack, Jest, Styled Components, Progressive Web Application (PWA), React Testing Library, Material-UI, Gatsby, Storybook, Gulp
+    Experiment with cloud: Amazon Web Services (AWS), Netlify, Terraform`,
+  },
+  {
+    title: "Software Engineer",
     organization: "Morgan Stanley",
     location: "Budapest, Hungary",
     start: moment("2016-08"),
@@ -15,7 +24,7 @@ const entries: Entry[] = [
     Improve a data heavy, exception management app which has 10 000 users
     Review code and help junior developers
     Lead retrospective and responsible for team improvement
-    Technologies: Angular, TypeScript, JavaScript, SCSS, CSS, REST, Git, Java, Spring, Elasticsearch, SQL`,
+    Technologies: Angular, TypeScript, JavaScript, SCSS, CSS, REST, Git, Java, Spring, Elasticsearch, SQL, RxJS, ngRx, Highcharts`,
   },
   {
     title: "Software Developer Intern",

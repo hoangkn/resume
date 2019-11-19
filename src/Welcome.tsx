@@ -83,7 +83,7 @@ export default function Welcome() {
           Hoang Khac Nguyen
         </Typography>
         <Typography variant="h4" align="center">
-          Front-end Developer
+          Software Engineer
         </Typography>
         <StyledIcon icon={faChevronDown} size="2x" />
       </FlexContentContainer>
