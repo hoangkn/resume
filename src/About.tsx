@@ -53,12 +53,6 @@ export default function About() {
   return (
     <>
       <SectionTitle>About Me</SectionTitle>
-      <Typography variant="subtitle1" paragraph>
-        I am an enthusiastic software engineer with 4 years’ experience
-        including Angular, TypeScript, JavaScript, Java, Spring. I have been
-        experimenting with latest technologies recently including React and AWS.
-        I am open for relocation.
-      </Typography>
       <Typography variant="h5">Skills</Typography>
       <InfoSection>
         <StyledIconifyWithSpan icon={gatsbyIcon} />
@@ -76,8 +70,6 @@ export default function About() {
         <StyledIconifyWithSpan icon={hungary} />
         <StyledIconifyWithSpan icon={uk} />
       </InfoSection>
-      <Typography variant="h5">Age</Typography>
-      <Typography variant="body1">28</Typography>
     </>
   )
 }

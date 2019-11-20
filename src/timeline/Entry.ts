@@ -6,5 +6,5 @@ export default interface Entry {
   readonly location: string
   readonly start: Moment
   readonly end?: Moment
-  readonly details?: string
+  readonly details: string
 }

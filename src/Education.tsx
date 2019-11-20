@@ -11,6 +11,7 @@ const entries: Entry[] = [
     location: "Budapest, Hungary",
     start: moment("2014-02"),
     end: moment("2016-06"),
+    details: "Subjects: Java, Java EE, .Net WinForms",
   },
   {
     title: "Bachelor's Degree, Electrical Engineering",
@@ -18,6 +19,7 @@ const entries: Entry[] = [
     location: "Budapest, Hungary",
     start: moment("2010-09"),
     end: moment("2014-02"),
+    details: "Subjects: C, C++, Foundation of Computer Science, Informatics",
   },
 ]
 
