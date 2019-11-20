@@ -12,6 +12,7 @@ const entry: Entry = {
   organization: "ORGANIZATION",
   start: moment("2019-10"),
   end: moment("2020-10"),
+  details: "DETAILS",
 }
 
 test("show title", () => {
