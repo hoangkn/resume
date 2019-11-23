@@ -37,7 +37,7 @@ jobs:
       - persist_to_workspace:
           root: ~/project
           paths:
-            - build
+            - public
   deploy:
     docker:
       - image: "circleci/python"
@@ -45,7 +45,7 @@ jobs:
       - attach_workspace:
           at: ~/workspace
       - aws-s3/sync:
-          from: ~/workspace/build
+          from: ~/workspace/public
           to: "s3://www.hoangkn.com"
           overwrite: true
       - run: aws cloudfront create-invalidation --distribution-id E1DSQ2GDJO6P0H --paths /index.html
