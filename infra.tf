@@ -72,6 +72,9 @@ resource "aws_cloudfront_distribution" "website" {
     }
     target_origin_id = local.website_s3_origin_id
     viewer_protocol_policy = "redirect-to-https"
+    default_ttl = 31536000
+    min_ttl = 31536000
+    max_ttl = 31536000
   }
   restrictions {
     geo_restriction {
