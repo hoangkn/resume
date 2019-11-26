@@ -33,5 +33,12 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "www.hoangkn.com",
+        enableS3StaticWebsiteHosting: false,
+      },
+    },
   ],
 }

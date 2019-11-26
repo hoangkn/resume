@@ -4,7 +4,7 @@
 #
 version: 2.1
 orbs:
-  aws-s3: circleci/aws-s3@1.0.11
+  aws-cli: circleci/aws-cli@0.1.18
 jobs:
   build:
     docker:
@@ -34,29 +34,14 @@ jobs:
           key: v1-dependencies-{{ checksum "yarn.lock" }}
 
       - run: yarn build
-      - persist_to_workspace:
-          root: ~/project
-          paths:
-            - public
-  deploy:
-    docker:
-      - image: "circleci/python"
-    steps:
-      - attach_workspace:
-          at: ~/workspace
-      - aws-s3/sync:
-          from: ~/workspace/public
-          to: "s3://www.hoangkn.com"
-          overwrite: true
-      - run: aws cloudfront create-invalidation --distribution-id E1DSQ2GDJO6P0H --paths /index.html
+      - aws-cli/setup
+      - run: yarn deploy
+      - run: aws cloudfront create-invalidation --distribution-id E1DSQ2GDJO6P0H --paths "/*"
 workflows:
-  build_deploy:
+  build:
     jobs:
-      - build
-      - deploy:
+      - build:
           context: aws
           filters:
             branches:
               only: master
-          requires:
-            - build
